@@ -8,7 +8,7 @@ import RimuruFunction from "./Rimuru";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <App title="Hola Mundo" /> */}
-    <RimuruFunction></RimuruFunction>
+    {/* <RimuruFunction></RimuruFunction> */}
     <CounterApp value={7}></CounterApp>
   </React.StrictMode>
 );

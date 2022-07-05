@@ -20,9 +20,11 @@ const CounterApp = ({ value }) => {
     <>
       <h1>CounterApp</h1>
       <h2> {counter} </h2>
-      <button onClick={addValue}>+1</button>
-      <button onClick={reduceValue}>-1</button>
-      <button onClick={resetValue}>Reset</button>
+      <div className="buttons">
+        <button onClick={addValue}>+1</button>
+        <button onClick={reduceValue}>-1</button>
+        <button onClick={resetValue}>Reset</button>
+      </div>
     </>
   );
 };
