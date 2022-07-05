@@ -6,7 +6,7 @@ import RimuruFunction from "./Rimuru";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App title={undefined} />
+    <App title="Hola Mundo" />
     <RimuruFunction></RimuruFunction>
   </React.StrictMode>
 );
