@@ -1,10 +1,28 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 const CounterApp = ({ value }) => {
+  const [counter, setCounter] = useState(value);
+
+  const addValue = () => {
+    setCounter(counter + 1);
+  };
+
+  const reduceValue = () => {
+    setCounter(counter - 1);
+  };
+
+  const resetValue = () => {
+    setCounter(value);
+  };
+
   return (
     <>
       <h1>CounterApp</h1>
-      <h2> {value} </h2>
+      <h2> {counter} </h2>
+      <button onClick={addValue}>+1</button>
+      <button onClick={reduceValue}>-1</button>
+      <button onClick={resetValue}>Reset</button>
     </>
   );
 };
