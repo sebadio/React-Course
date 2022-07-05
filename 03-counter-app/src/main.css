@@ -1,4 +1,13 @@
 body {
   background-color: #282c34;
   color: whitesmoke;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.3rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
