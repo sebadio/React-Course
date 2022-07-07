@@ -10,6 +10,6 @@ export const getImagen = async () => {
     imagen.src = data.sprites.front_default;
     return imagen.src;
   } catch (error) {
-    console.warn(error);
+    return error;
   }
 };
