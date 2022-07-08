@@ -1,4 +1,4 @@
 module.exports = {
-  //TODO: jsdom,
+  testEnvironment: "jest-Environment-jsdom",
   setupFiles: ["./jest.setup.js"],
 };
