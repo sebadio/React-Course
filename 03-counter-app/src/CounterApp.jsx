@@ -13,7 +13,7 @@ const CounterApp = ({ value }) => {
   };
 
   const resetValue = () => {
-    setCounter(value);
+    setCounter(0);
   };
 
   return (
