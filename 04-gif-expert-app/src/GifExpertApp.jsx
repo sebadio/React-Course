@@ -4,12 +4,11 @@ import { AddCategory } from "./Components/AddCategory";
 import { GifGrid } from "./Components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Tensura"]);
+  const [categories, setCategories] = useState(["Valorant"]);
 
   const onAddCategory = (newCategory) => {
     // Validamos si la nueva categoria ya existe
     if (categories.includes(newCategory)) {
-      console.warn("No papi");
       return;
     }
 
