@@ -1,32 +1,31 @@
 import React from "react";
 import { useState } from "react";
 import { AddCategory } from "./Components/AddCategory";
+import { GifGrid } from "./Components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Tensura", "Kimetsu no Yaiba"]);
+  const [categories, setCategories] = useState(["Tensura"]);
 
-  const onAddCategory = (e) => {
-    setCategories([e, ...categories]);
+  const onAddCategory = (newCategory) => {
+    // Validamos si la nueva categoria ya existe
+    if (categories.includes(newCategory)) {
+      console.warn("No papi");
+      return;
+    }
+
+    // Agregamos la categoria
+    setCategories([newCategory, ...categories]);
   };
 
   return (
     <>
-      {/* Titulo */}
       <h1>Gif-expert-app</h1>
 
-      {/* Input */}
+      <AddCategory onNewCategory={onAddCategory} />
 
-      <AddCategory setCategory={onAddCategory} />
-
-      {/* Gifs */}
-
-      <ol>
-        {categories.map((categoria) => {
-          return <li key={categoria}>{categoria}</li>;
-        })}
-      </ol>
-
-      {/* Gif item */}
+      {categories.map((categoria) => (
+        <GifGrid key={categoria} category={categoria} />
+      ))}
     </>
   );
 };
