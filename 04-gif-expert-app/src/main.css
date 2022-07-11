@@ -29,6 +29,28 @@ input {
   margin: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.65rem solid rgba(0, 0, 0, 0.19);
+  border-top: 0.65rem solid cyan;
+  border-right: 0.65rem solid cyan;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
