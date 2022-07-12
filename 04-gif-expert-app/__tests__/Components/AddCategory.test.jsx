@@ -18,7 +18,7 @@ describe("Pruebas en AddCategory", () => {
     expect(input.value).toBe("Rimuru");
   });
 
-  test("Deberia el valor de la caja de texto deberia de volver a ser null despues de hacer submit", () => {
+  test("El valor de la caja de texto deberia de volver a ser null despues de hacer submit", () => {
     render(<AddCategory onNewCategory={() => {}} />);
 
     const input = screen.getByRole("textbox");

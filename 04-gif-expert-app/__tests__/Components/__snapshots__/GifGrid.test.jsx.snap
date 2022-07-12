@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifGrid.jsx Deberia hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="gifCategory"
+  >
+    <h3>
+      Rimuru
+    </h3>
+    <div
+      aria-label="div"
+      class="loading"
+    />
+    <div
+      class="card-grid"
+    />
+  </div>
+</div>
+`;
