@@ -1,9 +1,13 @@
 import React from "react";
-import { useFetch } from "../hooks/useFetch";
+import { useCounter, useFetch } from "../hooks";
+import { LoadingQuote, Quote } from "./components/";
 
 export const MultipleCustomHooks = () => {
+  const { counter, incrementarCounter, decrementarCounter, resetearCounter } =
+    useCounter(1);
+
   const { data, isLoading, error } = useFetch(
-    "https://www.breakingbadapi.com/api/quotes/1"
+    `https://www.breakingbadapi.com/api/quotes/${counter}`
   );
 
   const { author, quote } = !!data && data[0];
@@ -14,14 +18,27 @@ export const MultipleCustomHooks = () => {
 
       <hr />
 
-      {isLoading ? (
-        <div className="alert alert-info text-center">Loading...</div>
-      ) : (
-        <blockquote className="blockquote text-end">
-          <p className="mb-1">{quote}</p>
-          <footer className="blockquote-footer mt-1">{author}</footer>
-        </blockquote>
-      )}
+      {isLoading ? <LoadingQuote /> : <Quote author={author} quote={quote} />}
+
+      <button
+        onClick={() => {
+          decrementarCounter();
+        }}
+        className="btn btn-primary"
+        disabled={isLoading}
+      >
+        Previous quote
+      </button>
+
+      <button
+        onClick={() => {
+          incrementarCounter();
+        }}
+        className="btn btn-primary"
+        disabled={isLoading}
+      >
+        Next quote
+      </button>
     </>
   );
 };
