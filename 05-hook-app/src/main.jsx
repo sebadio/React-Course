@@ -14,4 +14,7 @@ import "./index.css";
 // import { HooksAPP } from "./HooksAPP";
 // import { Layout } from "./05-useLayoutEffect/Layout";
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Padre />);
+import "./08-useReducer/intro-reducer";
+import { ToDoApp } from "./08-useReducer/ToDoApp";
+
+ReactDOM.createRoot(document.getElementById("root")).render(<ToDoApp />);
